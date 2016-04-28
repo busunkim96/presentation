@@ -29,7 +29,7 @@ def main():
 
     # Construct call to pandoc.
     if args.format in ["beamer", "slides"]:
-        pan_args = ["pandoc", "-f", "markdown", "-V", "colortheme:seahorse", "-V", "theme:Bergen"]
+        pan_args = ["pandoc", "-f", "markdown", "-V", "theme:Bergen"]
         if args.incremental:
             pan_args.append("--incremental")
         pan_args.extend(["--write", "beamer",
